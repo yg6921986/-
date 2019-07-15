@@ -11,3 +11,5 @@
 0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:44 +0800] "POST /checkitem/queryPage.do HTTP/1.1" 200 270 http-bio-82-exec-10 13
 0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:48 +0800] "GET /checkitem/queryById.do?id=50 HTTP/1.1" 200 162 http-bio-82-exec-3 8
 0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:54 +0800] "POST /checkitem/update.do HTTP/1.1" 200 59 http-bio-82-exec-3 14
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:21:05:31 +0800] "GET /pages/checkitem.html HTTP/1.1" 304 - http-bio-82-exec-1 92
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:21:05:32 +0800] "POST /checkitem/queryPage.do HTTP/1.1" 200 1167 http-bio-82-exec-2 968
