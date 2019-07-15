@@ -65,4 +65,19 @@ public class CheckgroupController {
             return new Result(false,MessageConstant.FLUSH_FAIL);
         }
     }
+
+    /**
+     * 更新检查组
+     * @param checkGroup
+     * @return
+     */
+    @RequestMapping("update")
+    public Result update(@RequestBody CheckGroup checkGroup){
+        try {
+            checkgroupService.update(checkGroup);
+            return  new Result(true,MessageConstant.EDIT_CHECKGROUP_SUCCESS);
+        } catch (Exception e) {
+            return new Result(false,MessageConstant.EDIT_CHECKGROUP_FAIL);
+        }
+    }
 }

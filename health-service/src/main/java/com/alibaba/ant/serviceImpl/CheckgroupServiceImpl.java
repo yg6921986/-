@@ -57,4 +57,13 @@ public class CheckgroupServiceImpl implements CheckgroupService {
     public CheckGroup queryById(Integer id) {
       return checkGroupMapper.selectByPrimaryKey(id);
     }
+
+    /**
+     * 编辑检查组
+     * @param checkGroup
+     */
+    @Override
+    public void update(CheckGroup checkGroup) {
+        checkGroupMapper.updateByPrimaryKeySelective(checkGroup);
+    }
 }

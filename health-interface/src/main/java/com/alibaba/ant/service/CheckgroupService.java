@@ -26,4 +26,10 @@ public interface CheckgroupService {
      * @return
      */
     CheckGroup queryById(Integer id);
+
+    /**
+     * 编辑检查组
+     * @param checkGroup
+     */
+    void update(CheckGroup checkGroup);
 }
