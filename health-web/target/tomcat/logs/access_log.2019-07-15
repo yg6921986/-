@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:05:49 +0800] "GET /pages/checkitem.html HTTP/1.1" 200 16110 http-bio-82-exec-1 66
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:05:49 +0800] "GET /js/axios.min.map HTTP/1.1" 404 983 http-bio-82-exec-2 4
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:05:50 +0800] "POST /checkitem/queryPage.do HTTP/1.1" 200 1169 http-bio-82-exec-3 1158
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:06:03 +0800] "GET /checkitem/queryById.do?id=38 HTTP/1.1" 200 150 http-bio-82-exec-4 38
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:06:23 +0800] "POST /checkitem/update.do HTTP/1.1" 200 59 http-bio-82-exec-5 35
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:34 +0800] "GET /js/axios.min.map HTTP/1.1" 404 983 http-bio-82-exec-7 4
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:37 +0800] "GET /pages/checkitem.html HTTP/1.1" 200 16330 http-bio-82-exec-8 4
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:37 +0800] "GET /js/axios.min.map HTTP/1.1" 404 983 http-bio-82-exec-9 1
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:37 +0800] "POST /checkitem/queryPage.do HTTP/1.1" 200 1167 http-bio-82-exec-10 32
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:39 +0800] "GET /checkitem/queryById.do?id=1 HTTP/1.1" 200 169 http-bio-82-exec-10 8
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:44 +0800] "POST /checkitem/queryPage.do HTTP/1.1" 200 270 http-bio-82-exec-10 13
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:48 +0800] "GET /checkitem/queryById.do?id=50 HTTP/1.1" 200 162 http-bio-82-exec-3 8
+0:0:0:0:0:0:0:1 - - [15/Jul/2019:20:12:54 +0800] "POST /checkitem/update.do HTTP/1.1" 200 59 http-bio-82-exec-3 14
