@@ -5,6 +5,8 @@ import com.github.pagehelper.Page;
 import com.libaba.ant.pojo.CheckItem;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface CheckItemMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -35,4 +37,11 @@ public interface CheckItemMapper {
      * @return
      */
     Integer queryCountFromGroup(@Param("checkitemId") Integer id);
+
+    /**
+     * 查询所有检查项
+     * @return
+     */
+    List<CheckItem> queryAll();
+
 }

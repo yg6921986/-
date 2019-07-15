@@ -81,4 +81,14 @@ public class CheckitemServiceImpl implements CheckitemService {
     public void updateById(CheckItem checkItem) {
         checkItemMapper.updateByPrimaryKeySelective(checkItem);
     }
+
+    /**
+     * 查询所有检查项
+     *
+     * @return
+     */
+    @Override
+    public List<CheckItem> queryAll() {
+        return checkItemMapper.queryAll();
+    }
 }

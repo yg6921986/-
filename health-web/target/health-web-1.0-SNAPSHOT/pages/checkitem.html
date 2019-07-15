@@ -240,7 +240,11 @@
                this.$refs.dataEditForm.validate((valid)=>{
                    if (valid) {
                        axios.post("/checkitem/update.do",this.formData).then((res)=>{
-                           console.log(res);
+                           this.dialogFormVisible4Edit=false;
+                           this.$message({
+                               message:res.data.message,
+                               type:res.data.flag?"success":"error"
+                           });
                        });
                    }else {
 

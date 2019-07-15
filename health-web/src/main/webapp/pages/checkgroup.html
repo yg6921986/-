@@ -55,7 +55,7 @@
                 <div class="box">
                     <div class="filter-container">
                         <el-input placeholder="编码/名称/助记码" v-model="pagination.queryString" style="width: 200px;" class="filter-item" @keyup.enter.native="handleFilter"></el-input>
-                        <el-button @click="findPage()" class="dalfBut">查询</el-button>
+                        <el-button @click="search()" class="dalfBut">查询</el-button>
                         <el-button type="primary" class="butT" @click="handleCreate()">新建</el-button>
                     </div>
                     <el-table size="small" current-row-key="id" :data="dataList" stripe highlight-current-row>
@@ -285,24 +285,66 @@
                 },
                 //添加
                 handleAdd () {
+                    axios.post("/checkgroup/add.do",this.formData).then((res)=>{
+                        this.dialogFormVisible=false;
+                        this.$message({
+                            message:res.data.message,
+                            type:res.data.flag?"success":"error"
+                        });
+                    }).finally(this.findPage());
                 },
                 //分页查询
                 findPage() {
+                    var param={
+                        currentPage:this.pagination.currentPage,
+                        pageSize:this.pagination.pageSize,
+                        queryString:this.pagination.queryString
+                    }
+                    axios.post("/checkgroup/queryPage.do",param).then((res)=>{
+                        console.log(res);
+                        this.pagination.total=res.data.total;
+                        this.dataList=res.data.rows;
+                    });
                 },
                 // 重置表单
                 resetForm() {
+                   this.formData={};
                 },
                 // 弹出添加窗口
                 handleCreate() {
+                    this.resetForm();
+                    this.dialogFormVisible=true;
+                    this.activeName='first';
+                    this.checkitemIds=[];
+                    axios.get("/checkitem/queryAll.do").then((res)=>{
+                        if (res.data.flag){
+                            this.tableData=res.data.data;
+                        } else {
+                            this.$message.error(res.data.message);
+                        }
+
+                    });
                 },
                 // 弹出编辑窗口
                 handleUpdate(row) {
+                    this.resetForm();
+                        this.dialogFormVisible4Edit=true;
+                    axios.get("/checkgroup/queryById.do?id="+row.id).then((res)=>{
+                        console.log(res);
+                    });
                 },
                 //切换页码
                 handleCurrentChange(currentPage) {
+                    this.pagination.currentPage=currentPage;
+                    this.findPage();
                 },
                 // 删除
                 handleDelete(row) {
+                },
+                //查询
+                search(){
+                    this.pagination.currentPage=1;
+                    this.findPage();
                 }
             }
         })

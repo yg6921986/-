@@ -4,6 +4,8 @@ import com.libaba.ant.pojo.CheckItem;
 import com.libaba.ant.pojo.PageResult;
 import com.libaba.ant.pojo.QueryPageBean;
 
+import java.util.List;
+
 public interface CheckitemService {
     /**
      * 增加检查项
@@ -36,4 +38,10 @@ public interface CheckitemService {
      * @param checkItem
      */
     void updateById(CheckItem checkItem);
+
+    /**
+     * 查询所有检查项
+     * @return
+     */
+    List<CheckItem> queryAll();
 }

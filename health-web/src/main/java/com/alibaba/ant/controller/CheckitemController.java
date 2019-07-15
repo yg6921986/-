@@ -7,10 +7,11 @@ import com.libaba.ant.pojo.CheckItem;
 import com.libaba.ant.pojo.PageResult;
 import com.libaba.ant.pojo.QueryPageBean;
 import com.libaba.ant.pojo.Result;
-import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Francis.G.Yang
@@ -96,5 +97,21 @@ public class CheckitemController {
         } catch (Exception e) {
             return new Result(false,MessageConstant.EDIT_CHECKITEM_FAIL);
         }
+    }
+
+
+    /**
+     * 查询所有检查项
+     * @return
+     */
+    @RequestMapping("queryAll")
+    public Result queryAll(){
+        try {
+            List<CheckItem> list=checkitemService.queryAll();
+            return new Result(true,list);
+        } catch (Exception e) {
+            return new Result(false,MessageConstant.QUERY_CHECKITEM_FAIL);
+        }
+
     }
 }

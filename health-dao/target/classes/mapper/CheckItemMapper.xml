@@ -36,8 +36,12 @@
   <select id="queryCountFromGroup" resultType="java.lang.Integer">
     select count(*) from t_checkgroup_checkitem where checkitem_id=#{checkitemId}
   </select>
+  <!--查询所有检查项-->
+    <select id="queryAll" resultType="com.libaba.ant.pojo.CheckItem">
+      select * from t_checkitem
+    </select>
 
-  <!--根据id删除检查项-->
+    <!--根据id删除检查项-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_checkitem
     where id = #{id,jdbcType=INTEGER}

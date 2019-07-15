@@ -8,6 +8,7 @@
 *.iml
 out
 gen
+target
 =======
 # Compiled class file
 *.class
@@ -33,3 +34,27 @@ gen
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 >>>>>>> 407cae9658369db52be7e96d12347f8de4483d04
+health-common/src/main/resources/
+health-common/src/test/
+health-common/target/generated-sources/
+health-dao/src/test/
+health-dao/target/generated-sources/
+health-interface/src/main/resources/
+health-interface/src/test/
+health-interface/target/generated-sources/
+health-pojo/src/main/resources/
+health-pojo/src/test/
+health-pojo/target/generated-sources/
+health-service/src/test/
+health-service/target/apache-tomcat-maven-plugin/
+health-service/target/generated-sources/
+health-service/target/health-service-1.0-SNAPSHOT/META-INF/
+health-service/target/tomcat/webapps/
+health-service/target/tomcat/work/
+health-web/src/test/
+health-web/target/apache-tomcat-maven-plugin/
+health-web/target/generated-sources/
+health-web/target/health-web-1.0-SNAPSHOT/META-INF/
+health-web/target/tomcat/logs/
+health-web/target/tomcat/webapps/
+health-web/target/tomcat/work/
