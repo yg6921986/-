@@ -28,6 +28,7 @@
       where code=#{queryString} or name=#{queryString} or helpCode=#{queryString}
     </if>
   </select>
+  <!--删除检查项-->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_checkgroup
     where id = #{id,jdbcType=INTEGER}

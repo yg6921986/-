@@ -80,4 +80,20 @@ public class CheckgroupController {
             return new Result(false,MessageConstant.EDIT_CHECKGROUP_FAIL);
         }
     }
+
+
+    /**
+     * 删除检查项
+     * @param id
+     * @return
+     */
+    @RequestMapping("delete")
+    public Result delete(Integer id){
+        try {
+            checkgroupService.delete(id);
+            return new Result(true,MessageConstant.DELETE_CHECKGROUP_SUCCESS);
+        } catch (Exception e) {
+            return new Result(false,MessageConstant.DELETE_CHECKGROUP_FAIL);
+        }
+    }
 }

@@ -352,6 +352,32 @@
                 },
                 // 删除
                 handleDelete(row) {
+                    this.$confirm('是否删除该检查项, 是否继续?', '提示', {
+                        confirmButtonText: '确定',
+                        cancelButtonText: '取消',
+                        type: 'warning'
+                    }).then(() => {
+                        axios.get("/checkgroup/delete.do?id="+row.id).then((res)=>{
+                            console.log(res);
+                            if (res.data.flag){
+                                this.$message({
+                                    type: 'success',
+                                    message: '删除成功!'
+                                });
+                            }
+                            else {
+                                this.$message({
+                                    type: 'error',
+                                    message: '删除失败!'
+                                });
+                            }
+                        });
+                    }).catch(() => {
+                        this.$message({
+                            type: 'info',
+                            message: '已取消删除'
+                        });
+                    });
                 },
                 //查询
                 search(){

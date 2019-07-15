@@ -32,4 +32,10 @@ public interface CheckgroupService {
      * @param checkGroup
      */
     void update(CheckGroup checkGroup);
+
+    /**
+     * 删除检查组
+     * @param id
+     */
+    void delete(Integer id);
 }

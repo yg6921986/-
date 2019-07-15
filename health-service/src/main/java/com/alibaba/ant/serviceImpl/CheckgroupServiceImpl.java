@@ -66,4 +66,13 @@ public class CheckgroupServiceImpl implements CheckgroupService {
     public void update(CheckGroup checkGroup) {
         checkGroupMapper.updateByPrimaryKeySelective(checkGroup);
     }
+
+    /**
+     * 删除检查组
+     * @param id
+     */
+    @Override
+    public void delete(Integer id) {
+        checkGroupMapper.deleteByPrimaryKey(id);
+    }
 }
